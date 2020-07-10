@@ -1,0 +1,1 @@
+INSERT INTO plants (panda_plant) VALUES random_rand(1, 0, 1);
