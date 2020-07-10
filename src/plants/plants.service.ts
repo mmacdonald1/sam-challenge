@@ -13,6 +13,10 @@ export class PlantsService {
         return await this.plantRepository.find();
     }
 
+    async grabNResults(n:number):Promise<Plant[]> {
+        return await this.plantRepository.query(`SELECT * FROM plants FETCH FIRST ${n} ROWS ONLY`)
+    }
+
     async  create(plant: Plant): Promise<Plant> {
         return await this.plantRepository.save(plant);
     }

@@ -17,6 +17,10 @@ export class PlantsController {
     index(): Promise<Plant[]> {
       return this.plantsService.findAll();
     }  
+    @Get(':n/get')
+    async grabNResults(@Param('n') n){
+        return this.plantsService.grabNResults(n)
+    }
     @Post('create')
     async create(@Body() plantData: Plant): Promise<any> {
       return this.plantsService.create(plantData);
