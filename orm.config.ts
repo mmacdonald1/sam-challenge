@@ -8,7 +8,7 @@ export const config:TypeOrmModuleOptions={
     host:process.env.DB_HOST,
     port:5432,
     database:process.env.DB_NAME,
-    synchronize:false, //false in production
+    synchronize:true, //false in production
     logging:true,
     entities:["dist/**/*.entity.{ts,js}"]
 }

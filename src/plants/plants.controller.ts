@@ -17,7 +17,7 @@ export class PlantsController {
     index(): Promise<Plant[]> {
       return this.plantsService.findAll();
     }  
-    @Get(':n/get')
+    @Get(':n/getByNumRows')
     async grabNResults(@Param('n') n){
         return this.plantsService.grabNResults(n)
     }

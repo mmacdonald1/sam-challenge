@@ -14,6 +14,7 @@ export class PlantsService {
     }
 
     async grabNResults(n:number):Promise<Plant[]> {
+        //grab parameter to use in sql query to fetch rows dynamically
         return await this.plantRepository.query(`SELECT * FROM plants FETCH FIRST ${n} ROWS ONLY`)
     }
 
