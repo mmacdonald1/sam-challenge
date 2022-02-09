@@ -17,16 +17,6 @@ export class PlantSeedService {
       return this.plantRepository.save(plantRecord).catch(err => {
         throw err;
       });
-    }); // create an array of values from RoleEnum for available roles
-
-    // return roleData.map(async (currRole: RolesEnum) => {
-    //   return this.plantRepository
-    //     .findOne({  })
-    //     .then(async dbRes => {
-    //       if (dbRes) return; // if the role exists, return and don't save role
-    //       return this.roleRepository.save({ role: currRole });
-    //     })
-    //     .catch(err => err);
-    // });
+    });
   }
 }
